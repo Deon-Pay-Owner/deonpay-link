@@ -95,8 +95,13 @@ export default function CheckoutClient({ sessionId }: { sessionId: string }) {
     document.body.appendChild(script)
 
     return () => {
-      document.head.removeChild(link)
-      document.body.removeChild(script)
+      // Check if elements are still children before removing to prevent React errors
+      if (link.parentNode === document.head) {
+        document.head.removeChild(link)
+      }
+      if (script.parentNode === document.body) {
+        document.body.removeChild(script)
+      }
     }
   }, [])
 
