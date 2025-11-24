@@ -87,7 +87,7 @@ export default function CheckoutClient({ sessionId }: { sessionId: string }) {
 
     // Load JS
     const script = document.createElement('script')
-    script.src = 'https://elements.deonpay.mx/sdk/deonpay-elements-v1.js?v=20251123'
+    script.src = 'https://elements.deonpay.mx/sdk/deonpay-elements-v1.js?v=20251124'
     script.async = true
     script.onload = () => {
       console.log('DeonPay SDK loaded')
